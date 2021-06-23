@@ -1,0 +1,180 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    margin: 0;
+}
+
+#skip-cta {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+}
+
+#skip-cta:focus {
+    height: unset;
+    padding: .5rem 0;
+}
+
+.company-info, .main-nav {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.company-info {
+    top: 0;
+}
+
+.visible-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.visible-info a {
+    padding: 1rem;
+}
+
+.main-nav {
+    bottom: 0;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-nav a {
+    display: block;
+    padding: 1rem 0;
+    min-width: 86px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-section {
+    display: grid;
+    height: 96vh;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    padding: 0 1rem
+}
+
+.hero-section header {
+    align-self: center;
+}
+
+.hero-section address {
+    text-transform: uppercase;
+}
+
+.hero-section h1 {
+    margin: 2rem 0 .5rem 0;
+    text-transform: uppercase;
+}
+
+.hero-section header a {
+    display: block;
+    padding: .5rem;
+    max-width: 365px;
+    margin: 0 auto;
+}
+
+.hero-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-section li {
+    margin: 0 auto 1rem auto;
+    max-width: 365px;
+}
+
+.hero-section li a {
+    display: block;
+    padding: .5rem 0;
+    border: 1px solid #ccc;
+
+}
+
+#services, #contact {
+    padding: 2rem 1rem;
+}
+
+#services ol {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+#services ol li {
+    padding: .5rem;
+    margin: .25rem .5rem .25rem 0;
+    border: 1px solid #ccc;
+}
+
+#contact {
+    height: 100vh;
+}
+
+
+article {
+    padding-top: 2rem;
+}
+article img {
+    width: 100%;
+}
+
+article a {
+    padding: .5rem 1rem;
+    border: 1px solid #ccc;
+    margin: .5rem .5rem 0 0;
+    display: block;
+    text-align: center;
+}
+
+article button {
+    background: transparent;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    padding: .5rem 0;
+}
+
+.service-desc[aria-expanded="false"] {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.service-desc[aria-expanded="true"] {
+    height: unset;
+}

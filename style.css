@@ -3,6 +3,10 @@ html, body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -18,6 +22,35 @@ a:focus, a:hover {
 
 figure {
     margin: 0;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+form {
+    text-align: center;
+    margin: 2rem auto;
+}
+form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+form input {
+    margin-bottom: 1rem;
+}
+
+form input, form textarea {
+    min-width: 275px;
+    width: calc(100% - 2rem);
 }
 
 #skip-cta {
@@ -64,7 +97,7 @@ figure {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .main-nav a {
@@ -118,7 +151,10 @@ figure {
     display: block;
     padding: .5rem 0;
     border: 1px solid #ccc;
+}
 
+.hero-section li a:hover {
+    border: 1px solid #404040;
 }
 
 #services, #contact {
@@ -135,13 +171,20 @@ figure {
 
 #services ol li {
     padding: .5rem;
-    margin: .25rem .5rem .25rem 0;
-    border: 1px solid #ccc;
+    margin: .25rem 0;
 }
 
-#contact {
-    height: 100vh;
+#services ol li::after {
+    content: ">";
+    margin-left: 1rem;
 }
+
+#services ol li:last-child::after {
+    content: " ";
+    margin-left: 0px;
+}
+
+
 
 
 article {
@@ -177,4 +220,83 @@ article button {
 
 .service-desc[aria-expanded="true"] {
     height: unset;
+}
+
+
+
+@media (min-width: 769px) {
+    .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        background-color: #f2f2f2;
+    }
+    .company-info, .main-nav {
+        position: unset;
+    }
+
+    .header-call {
+        display: none;
+    }
+
+    .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    #services, #contact {
+        height: 100vh;
+    }
+
+    #services article {
+        padding-top: 2rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-nav ul {
+        justify-content: flex-end;
+    }
+
+    .hero-section ul {
+        min-width: 400px;
+    }
+
+    .hero-section h1 {
+        margin: 0 0 .5rem 0;
+    }
+
+
+    .flex-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .flex-container article {
+        padding: 1rem;
+    }
+
+    #contact .flex-container {
+        justify-content: space-evenly;
+    }
+
+    form {
+        width: 100%;
+    }
 }
